@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+    ::selection {
+        background-color: hsl(171,66%,44%);
+        color: #fff;
+    }
     h3 {
         @apply mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl;
     }
@@ -10,7 +14,11 @@
         @apply mb-2 text-2xl font-bold text-darkGrayishBlue;
     }
 }
-
+body {
+    background-image: url('../images/bg-header-desktop.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 .section-container {
     @apply max-w-6xl mx-auto text-center px-10;
 }
@@ -21,17 +29,14 @@
     @apply p-4 px-8 rounded-full shadow-lg duration-200 hover:opacity-80;
 }
 .section-paragraph {
-    @apply max-w-3xl mx-auto mb-24 text-xl leading-9 text-center text-grayishBlue;
+    @apply max-w-3xl mx-auto leading-9 text-center text-grayishBlue;
 }
-
-body {
-    background-image: url('../images/bg-header-desktop.png');
-    background-repeat: no-repeat;
-    background-size: contain;
+.ficon:hover {
+    filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg) brightness(101%) contrast(94%)
 }
-
 @media(max-width: 576px) {
     body {
         background-image: url('../images/bg-header-mobile.png');
     }
 }
+
