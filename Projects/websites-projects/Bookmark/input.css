@@ -22,3 +22,55 @@
         @apply absolute rounded-r-full top-60 bg-softBlue;
     }
 }
+
+.ficon:hover {
+    filter: invert(53%) sepia(38%) saturate(3303%) 
+        hue-rotate(326deg) brightness(101%) contrast(96%);
+}
+
+/* HAMBURGUER MENU */
+.hamburguer {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+.hamburguer-top,
+.hamburguer-middle,
+.hamburguer-bottom {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    top: 0;
+    left: 0;
+    background: #000;
+    transform: rotate(0);
+    transition: all .5s;
+}
+.hamburguer-middle {
+    transform: translateY(7px);
+}
+.hamburguer-bottom {
+    transform: translateY(14px);
+    background: #000;
+}
+.open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+    position: fixed;
+    top: 50px;
+    right: 25px;
+}
+.open .hamburguer-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+    background-color: #fff;
+}
+.open .hamburguer-middle {
+    display: none;
+}
+.open .hamburguer-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+    background-color: #fff;
+}
